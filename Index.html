@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/Style/Style.css" />
+    <script src="./assets/Script/app.js" defer></script>
+    <title>User login</title>
+  </head>
+  <body>
+    <div id="backdrop"></div>
+    <div class="logout hidden">
+      <button id="btnlogout">Log Out</button>
+    </div>
+    <section>
+      <div class="container">
+        <div class="login-control">
+          <label for="userName">User name:</label>
+          <input type="text" id="userName" />
+        </div>
+        <div class="login-control">
+          <label for="passwd">Password:</label>
+          <input type="password" id="passwd" />
+          <small>Error message</small>
+        </div>
+        <button id="login">Login</button>
+      </div>
+
+      <!-- _______________________________________NOEMAL USER__________________________________ -->
+
+      <div class="form hidden">
+        <form>
+          <h2>Add Your Information</h2>
+          <div class="form-control">
+            <label for="username">User name</label>
+            <input type="text" id="username" placeholder="Enter username" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" placeholder="Enter Phone number" />
+            <small>Error message</small>
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
+      <div class="info">
+        <h2>Your information</h2>
+        <ul id="info-normal-user"></ul>
+        <button>Ok</button>
+      </div>
+      <!-- _______________________________________ADMIN USER__________________________________ -->
+      <div class="admin-users hidden">
+        <h1>All users of this application</h1>
+        <div class="filter">
+          <h4>Filter users</h4>
+          <div class="filter-control">
+            <label>Gender:</label>
+            <select id="gender-filter">
+              <option value="0">All</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+            </select>
+          </div>
+          <div class="filter-control">
+            <label>Age:</label>
+            <select id="age-filter">
+              <option value="0">All</option>
+              <option value="30">From (20) to (30) years</option>
+              <option value="40">From (31) to (40) years</option>
+              <option value="50">From (41) to (50) years</option>
+            </select>
+          </div>
+        </div>
+        <table class="table-title">
+          <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Is Admin</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Delete</th>
+          </tr>
+        </table>
+        <table class="list-all-users"></table>
+      </div>
+    </section>
+  </body>
+</html>
